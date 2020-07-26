@@ -60,8 +60,6 @@ const powers = [
   });
 
   app.use('/img', express.static(path.join(__dirname,'img')));
-
-  console.log(`Heroes service listening on port ${port}`);
   app.listen(PORT, () => {
     console.log("Listing to port", PORT)
 });
