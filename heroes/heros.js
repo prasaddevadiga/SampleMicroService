@@ -2,7 +2,6 @@ const express = require('express');
 const path = require('path');
 const bodyParser = require('body-parser');
 
-// const port = process.argv.slice(2)[0];
 const PORT = process.env.PORT || 3000;
 const app = express();
 app.use(bodyParser.json());
@@ -63,6 +62,6 @@ const powers = [
   app.use('/img', express.static(path.join(__dirname,'img')));
 
   console.log(`Heroes service listening on port ${port}`);
-app.listen(port, () => {
-    console.log("Listing to port", port)
+  app.listen(PORT, () => {
+    console.log("Listing to port", PORT)
 });
